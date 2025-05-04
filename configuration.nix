@@ -67,15 +67,9 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    bat
-    file
-    firefox
-    ghostty
     git
     nixd
     vim
-    waybar
-    zed-editor
   ];
 
   programs.hyprland.enable = true;
