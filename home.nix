@@ -33,6 +33,17 @@
     # '')
   ];
 
+  wayland.windowManager.hyprland = {
+    enable = true;
+
+    settings = {
+      "$mod" = "SUPER";
+      bind = [
+      "$mod, T, exec, ghostty"
+      ];
+    };
+  };
+
   programs = {
     bash.enable = true;
 
