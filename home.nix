@@ -21,15 +21,9 @@
     bat
     file
     firefox
-    ghostty
+    nerd-fonts.jetbrains-mono
     waybar
     zed-editor
-
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
     # You can also create simple shell scripts directly inside your
     # configuration. For example, this adds a command 'my-hello' to your
@@ -40,6 +34,8 @@
   ];
 
   programs = {
+    bash.enable = true;
+
     git = {
       enable = true;
       userName = "Andromeda";
@@ -54,8 +50,20 @@
       gitCredentialHelper.enable = true;
     };
 
-    starship = {
+    zoxide = {
       enable = true;
+      options = [
+        "--cmd cd"
+      ];
+    };
+
+    starship.enable = true;
+
+    ghostty = {
+      enable = true;
+      settings = {
+        font-family = "jetbrains-mono";
+      };
     };
   };
 
