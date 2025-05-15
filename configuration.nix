@@ -80,10 +80,12 @@
   #   enableSSHSupport = true;
   # };
 
-  # List services that you want to enable:
+  services = {
+    # fwupdmgr (system firmware update manager)
+    fwupd.enable = true;
 
-  # fwupdmgr (system firmware update manager)
-  services.fwupd.enable = true;
+    pipewire.enable = true;
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
