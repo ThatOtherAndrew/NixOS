@@ -36,7 +36,18 @@
     enable = true;
 
     settings = {
+      # Variables
       "$mod" = "SUPER";
+
+      # Autostart
+      exec-once = "waybar";
+
+      general = {
+        border_size = 1;  # border width
+
+        resize_on_border = true;
+      };
+
       bind = [
       "$mod, T, exec, ghostty"
       ];
