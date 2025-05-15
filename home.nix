@@ -22,7 +22,6 @@
     file
     firefox
     nerd-fonts.jetbrains-mono
-    waybar
     zed-editor
 
     # You can also create simple shell scripts directly inside your
@@ -75,6 +74,10 @@
       settings = {
         font-family = "jetbrains-mono";
       };
+    };
+
+    waybar = {
+      enable = true;
     };
   };
 
