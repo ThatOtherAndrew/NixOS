@@ -55,7 +55,13 @@
   };
 
   programs = {
-    bash.enable = true;
+    bash = {
+      enable = true;
+      initExtra = ''
+        # Source .profile if it exists
+        [[ -f ~/.profile ]] && . ~/.profile
+      '';
+    };
 
     git = {
       enable = true;
@@ -93,7 +99,7 @@
 
     nh = {
       enable = true;
-      flake = ./.;
+      flake = "/home/andromeda/nixos";
     };
   };
 
