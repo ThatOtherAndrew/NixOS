@@ -22,6 +22,7 @@
     file
     google-chrome
     nerd-fonts.jetbrains-mono
+    walker
     zed-editor
 
     # You can also create simple shell scripts directly inside your
@@ -50,6 +51,7 @@
 
       bind = [
       "$mod, T, exec, ghostty"
+      "$mod, space, exec, walker"
       ];
     };
   };
