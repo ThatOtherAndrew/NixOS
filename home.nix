@@ -33,6 +33,16 @@
     # '')
   ];
 
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts = {
+      serif = [];
+      sansSerif = [];
+      monospace = ["JetBrains Mono Nerd Font"];
+      emoji = [];
+    };
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
 
