@@ -57,7 +57,7 @@
   users.users.andromeda = {
     isNormalUser = true;
     description = "andromeda";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "audio" "networkmanager" "wheel" ];
     packages = with pkgs; [];
   };
 
