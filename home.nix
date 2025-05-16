@@ -20,7 +20,7 @@
   home.packages = with pkgs; [
     bat
     file
-    firefox
+    google-chrome
     nerd-fonts.jetbrains-mono
     zed-editor
 
@@ -55,13 +55,7 @@
   };
 
   programs = {
-    bash = {
-      enable = true;
-      initExtra = ''
-        # Source .profile if it exists
-        [[ -f ~/.profile ]] && . ~/.profile
-      '';
-    };
+    bash.enable = true;
 
     git = {
       enable = true;
@@ -88,9 +82,6 @@
 
     ghostty = {
       enable = true;
-      settings = {
-        font-family = "jetbrains-mono";
-      };
     };
 
     waybar = {
@@ -135,7 +126,8 @@
   #  /etc/profiles/per-user/andromeda/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "zeditor";
+    NIXOS_OZONE_WL = "1";
   };
 
   # Let Home Manager install and manage itself.
