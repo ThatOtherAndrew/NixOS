@@ -80,11 +80,19 @@
   #   enableSSHSupport = true;
   # };
 
+  security.rtkit.enable = true;  # recommended for PipeWire
+
   services = {
     # fwupdmgr (system firmware update manager)
     fwupd.enable = true;
 
-    pipewire.enable = true;
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      jack.enable = true;
+    };
   };
 
   # Open ports in the firewall.
