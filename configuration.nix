@@ -93,6 +93,28 @@
       pulse.enable = true;
       jack.enable = true;
     };
+
+  programs.nvf = {
+    enable = true;
+
+    settings.vim = {
+      theme = {
+        enable = true;
+        name = "onedark";
+      };
+
+      languages = {
+        nix.enable = true;
+        python.enable = true;
+      };
+
+      lsp.enable = true;
+
+      binds.whichKey.enable = true;
+      statusline.lualine.enable = true;
+      utility.vim-wakatime.enable = true;
+      telescope.enable = true;
+    };
   };
 
   # Open ports in the firewall.

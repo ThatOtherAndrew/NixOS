@@ -9,9 +9,14 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, nixos-hardware, home-manager, ... }: {
+  outputs = { nixpkgs, home-manager, ... } @ inputs: {
     nixosConfigurations = let
       username = "andromeda";
       hostname = "nixos";
@@ -20,13 +25,14 @@
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
-          nixos-hardware.nixosModules.framework-16-7040-amd
+          inputs.nixos-hardware.nixosModules.framework-16-7040-amd
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${username} = ./home.nix;
           }
+          inputs.nvf.nixosModules.default
         ];
       };
     };
