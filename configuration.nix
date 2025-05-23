@@ -82,6 +82,14 @@
 
   security.rtkit.enable = true;  # recommended for PipeWire
 
+  virtualisation.docker = {
+    enable = true;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
+
   services = {
     # fwupdmgr (system firmware update manager)
     fwupd.enable = true;
@@ -97,23 +105,30 @@
   programs.nvf = {
     enable = true;
 
-    settings.vim = {
-      theme = {
-        enable = true;
-        name = "onedark";
+  programs = {
+    steam.enable = true;
+
+    nvf = {
+      enable = true;
+
+      settings.vim = {
+        theme = {
+          enable = true;
+          name = "onedark";
+        };
+
+        languages = {
+          nix.enable = true;
+          python.enable = true;
+        };
+
+        lsp.enable = true;
+
+        binds.whichKey.enable = true;
+        statusline.lualine.enable = true;
+        utility.vim-wakatime.enable = true;
+        telescope.enable = true;
       };
-
-      languages = {
-        nix.enable = true;
-        python.enable = true;
-      };
-
-      lsp.enable = true;
-
-      binds.whichKey.enable = true;
-      statusline.lualine.enable = true;
-      utility.vim-wakatime.enable = true;
-      telescope.enable = true;
     };
   };
 
@@ -130,5 +145,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
-
 }
