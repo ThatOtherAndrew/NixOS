@@ -14,6 +14,11 @@
       url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    tsutsumi = {
+      url = "github:Fuwn/tsutsumi";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, home-manager, ... } @ inputs: {
@@ -31,6 +36,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${username} = ./home.nix;
+            home-manager.extraSpecialArgs = { inherit inputs; };
           }
           inputs.nvf.nixosModules.default
         ];

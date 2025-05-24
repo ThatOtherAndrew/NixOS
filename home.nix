@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -22,8 +22,11 @@
     file
     google-chrome
     nerd-fonts.jetbrains-mono
+    nil
     walker
     zed-editor
+
+    inputs.tsutsumi.packages.${system}.wakatime-ls
 
     # You can also create simple shell scripts directly inside your
     # configuration. For example, this adds a command 'my-hello' to your
