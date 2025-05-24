@@ -102,8 +102,27 @@
       jack.enable = true;
     };
 
-  programs.nvf = {
-    enable = true;
+    actkbd = {
+      enable = true;
+      bindings = [
+        {
+          keys = [ 113 ];
+          events = [ "key" ];
+          command = "${pkgs.alsa-utils}/bin/amixer -q set Master toggle";
+        }
+        {
+          keys = [ 224 ];
+          events = [ "key" ];
+          command = "${pkgs.brightnessctl}/bin/brightnessctl set +10%";
+        }
+        {
+          keys = [ 225 ];
+          events = [ "key" ];
+          command = "${pkgs.brightnessctl}/bin/brightnessctl set -10%";
+        }
+      ];
+    };
+  };
 
   programs = {
     steam.enable = true;
