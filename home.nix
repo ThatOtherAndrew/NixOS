@@ -59,9 +59,20 @@
         resize_on_border = true;
       };
 
+      input = {
+        kb_layout = "gb";
+        touchpad.natural_scroll = true;
+      };
+
+      # Binds (https://wiki.hyprland.org/Configuring/Binds/)
       bind = [
       "$mod, T, exec, ghostty"
       "$mod, space, exec, walker"
+      ];
+
+      bindm = [
+      "$mod, mouse:272, movewindow"
+      "$mod, mouse:273, resizewindow"
       ];
     };
   };
