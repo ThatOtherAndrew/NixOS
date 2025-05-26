@@ -23,6 +23,7 @@
     google-chrome
     nerd-fonts.jetbrains-mono
     nil
+    overskride
     twemoji-color-font
     walker
     zed-editor
@@ -59,7 +60,6 @@
 
       general = {
         border_size = 1;  # border width
-
         resize_on_border = true;
       };
 
@@ -69,14 +69,39 @@
       };
 
       # Binds (https://wiki.hyprland.org/Configuring/Binds/)
+      /*
+        l -> locked, will also work when an input inhibitor (e.g. a lockscreen) is active.
+        r -> release, will trigger on release of a key.
+        c -> click, will trigger on release of a key or button as long as the mouse cursor stays inside binds:drag_threshold.
+        g -> drag, will trigger on release of a key or button as long as the mouse cursor moves outside binds:drag_threshold.
+        o -> longPress, will trigger on long press of a key.
+        e -> repeat, will repeat when held.
+        n -> non-consuming, key/mouse events will be passed to the active window in addition to triggering the dispatcher.
+        m -> mouse, see below.
+        t -> transparent, cannot be shadowed by other binds.
+        i -> ignore mods, will ignore modifiers.
+        s -> separate, will arbitrarily combine keys between each mod/key, see [Keysym combos](#keysym-combos) above.
+        d -> has description, will allow you to write a description for your bind.
+        p -> bypasses the app's requests to inhibit keybinds.
+      */
+
       bind = [
-      "$mod, T, exec, ghostty"
-      "$mod, space, exec, walker"
+        "$mod, T, exec, ghostty"
+        "$mod, space, exec, walker"
       ];
 
       bindm = [
-      "$mod, mouse:272, movewindow"
-      "$mod, mouse:273, resizewindow"
+        "$mod, mouse:272, movewindow"
+        "$mod, mouse:273, resizewindow"
+      ];
+
+      bindel = [
+        ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+        ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+      ];
+
+      bindl = [
+        ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
       ];
     };
   };
