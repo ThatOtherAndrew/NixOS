@@ -86,7 +86,7 @@
       */
 
       bind = [
-        "$mod, T, exec, ghostty"
+        "$mod, T, exec, kitty"
         "$mod, space, exec, walker"
       ];
 
@@ -132,7 +132,7 @@
 
     starship.enable = true;
 
-    ghostty = {
+    kitty = {
       enable = true;
     };
 
