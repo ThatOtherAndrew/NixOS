@@ -23,6 +23,7 @@
     google-chrome
     nerd-fonts.jetbrains-mono
     nil
+    twemoji-color-font
     walker
     zed-editor
 
