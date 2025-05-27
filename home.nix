@@ -69,6 +69,10 @@
         touchpad.natural_scroll = true;
       };
 
+      gestures = {
+        workspace_swipe = true;
+      };
+
       # Binds (https://wiki.hyprland.org/Configuring/Binds/)
       /*
         l -> locked, will also work when an input inhibitor (e.g. a lockscreen) is active.
@@ -89,6 +93,8 @@
       bind = [
         "$mod, T, exec, kitty"
         "$mod, space, exec, walker"
+        "$mod, left, movetoworkspace, -1"
+        "$mod, right, movetoworkspace, +1"
       ];
 
       bindm = [
@@ -99,10 +105,13 @@
       bindel = [
         ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
         ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+        ", XF86MonBrightnessUp, exec, brightnessctl set 5%+"
+        ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
       ];
 
       bindl = [
         ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
       ];
     };
   };
