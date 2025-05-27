@@ -26,6 +26,9 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Speed up boot by skipping network checks (redundant with NetworkManager)
+  systemd.network.wait-online.enable = false;
+
   # Set your time zone.
   time.timeZone = "Europe/London";
 
