@@ -29,8 +29,10 @@
   # Speed up boot by skipping network checks (redundant with NetworkManager)
   systemd.network.wait-online.enable = false;
 
-  # Set your time zone.
-  # time.timeZone = "Europe/London";
+  services.udev.extraRules = ''
+    SUBSYSTEM=="usb", DRIVERS=="usb", ATTRS{idVendor}=="32ac", ATTRS{idProduct}=="0018", ATTR{power/wakeup}="disabled", ATTR{driver/1-1.1.1.4/power/wakeup}="disabled"
+  '';
+
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
