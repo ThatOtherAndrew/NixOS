@@ -19,11 +19,13 @@
   # environment.
   home.packages = with pkgs; [
     bat
+    comma
     file
     google-chrome
     nerd-fonts.jetbrains-mono
     nil
     overskride
+    ripgrep-all
     twemoji-color-font
     twitter-color-emoji
     walker
@@ -38,6 +40,11 @@
       # echo "Hello, ${config.home.username}!"
     # '')
   ];
+
+  home.shellAliases = {
+    grep = "rga";
+    cat = "bat";
+  };
 
   fonts.fontconfig = {
     enable = true;
