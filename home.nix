@@ -25,6 +25,7 @@
     nil
     overskride
     twemoji-color-font
+    twitter-color-emoji
     walker
     zed-editor
 
@@ -44,7 +45,7 @@
       serif = [];
       sansSerif = [];
       monospace = ["JetBrains Mono Nerd Font"];
-      emoji = [];
+      emoji = ["Twitter Color Emoji"];
     };
   };
 
