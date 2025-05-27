@@ -96,6 +96,8 @@
     # fwupdmgr (system firmware update manager)
     fwupd.enable = true;
 
+    power-profiles-daemon.enable = true;
+
     pipewire = {
       enable = true;
       alsa.enable = true;
