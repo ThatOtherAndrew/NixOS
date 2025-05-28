@@ -117,6 +117,7 @@
       */
 
       bind = [
+        "$mod, Q, killactive"
         "$mod, T, exec, kitty"
         "$mod, F, fullscreen, toggle"
         "$mod, space, exec, walker"
