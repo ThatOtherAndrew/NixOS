@@ -22,6 +22,7 @@
     brightnessctl
     file
     google-chrome
+    mission-center
     nerd-fonts.jetbrains-mono
     nil
     overskride
