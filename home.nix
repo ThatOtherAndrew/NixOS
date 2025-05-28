@@ -19,6 +19,7 @@
   # environment.
   home.packages = with pkgs; [
     bat
+    brightnessctl
     file
     google-chrome
     nerd-fonts.jetbrains-mono
