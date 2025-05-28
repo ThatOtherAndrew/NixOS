@@ -19,7 +19,6 @@
   # environment.
   home.packages = with pkgs; [
     bat
-    comma
     file
     google-chrome
     nerd-fonts.jetbrains-mono

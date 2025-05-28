@@ -19,6 +19,11 @@
       url = "github:Fuwn/tsutsumi";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, home-manager, ... } @ inputs: {
@@ -39,6 +44,10 @@
             home-manager.extraSpecialArgs = { inherit inputs; };
           }
           inputs.nvf.nixosModules.default
+          inputs.nix-index-database.nixosModules.nix-index
+          {
+            programs.nix-index-database.comma.enable = true;
+          }
         ];
       };
     };
