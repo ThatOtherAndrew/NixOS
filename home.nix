@@ -74,7 +74,10 @@
       "$mod" = "SUPER";
 
       # Autostart
-      exec-once = "waybar";
+      exec-once = [
+        "swww-daemon"
+        "waybar"
+      ];
 
       general = {
         border_size = 1;  # border width
@@ -88,6 +91,11 @@
 
       gestures = {
         workspace_swipe = true;
+      };
+
+      misc = {
+        disable_hyprland_logo = true;
+        disable_splash_rendering = true;
       };
 
       # Binds (https://wiki.hyprland.org/Configuring/Binds/)
@@ -171,6 +179,10 @@
       enable = true;
       flake = "/home/andromeda/nixos";
     };
+  };
+
+  services = {
+    swww.enable = true;
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
