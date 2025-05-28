@@ -29,6 +29,8 @@
     ripgrep-all
     twemoji-color-font
     twitter-color-emoji
+    unifont
+    unifont_upper
     walker
     zed-editor
 
@@ -172,6 +174,10 @@
 
     kitty = {
       enable = true;
+      keybindings = {
+        up = "increase_font_size";
+        down = "decrease_font_size";
+      };
     };
 
     waybar = {
