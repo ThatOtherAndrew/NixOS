@@ -118,6 +118,7 @@
 
       bind = [
         "$mod, T, exec, kitty"
+        "$mod, F, fullscreen, toggle"
         "$mod, space, exec, walker"
         "$mod, left, movetoworkspace, -1"
         "$mod, right, movetoworkspace, +1"
