@@ -19,6 +19,7 @@
   # environment.
   home.packages = with pkgs; [
     bat
+    beeper
     brightnessctl
     ffmpeg
     file
@@ -35,6 +36,7 @@
     twitter-color-emoji
     unifont
     unifont_upper
+    vesktop
     walker
     zed-editor
 
