@@ -26,8 +26,10 @@
     mission-center
     nerd-fonts.jetbrains-mono
     nil
+    nwg-displays
     overskride
     pavucontrol
+    pinta
     ripgrep-all
     twemoji-color-font
     twitter-color-emoji
@@ -77,6 +79,12 @@
     settings = {
       # Variables
       "$mod" = "SUPER";
+
+      # Imports
+      source = [
+        "~/.config/hypr/monitors.conf"
+        "~/.config/hypr/workspaces.conf"
+      ];
 
       # Autostart
       exec-once = [
@@ -176,10 +184,6 @@
 
     kitty = {
       enable = true;
-      keybindings = {
-        up = "increase_font_size";
-        down = "decrease_font_size";
-      };
     };
 
     waybar = {
