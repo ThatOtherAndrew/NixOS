@@ -20,12 +20,14 @@
   home.packages = with pkgs; [
     bat
     brightnessctl
+    ffmpeg
     file
     google-chrome
     mission-center
     nerd-fonts.jetbrains-mono
     nil
     overskride
+    pavucontrol
     ripgrep-all
     twemoji-color-font
     twitter-color-emoji
