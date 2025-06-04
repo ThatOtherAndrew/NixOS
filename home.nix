@@ -78,6 +78,15 @@
   wayland.windowManager.hyprland = {
     enable = true;
 
+    # don't conflict with UWSM
+    # https://wiki.hyprland.org/Useful-Utilities/Systemd-start/#installation
+    systemd.enable = false;
+
+    # use NixOS module packages
+    # https://wiki.hyprland.org/Nix/Hyprland-on-Home-Manager/#using-the-home-manager-module-with-nixos
+    package = null;
+    portalPackage = null;
+
     settings = {
       # Variables
       "$mod" = "SUPER";
@@ -196,6 +205,8 @@
       enable = true;
       flake = "/home/andromeda/nixos";
     };
+
+    obs-studio.enable = true;
   };
 
   services = {
