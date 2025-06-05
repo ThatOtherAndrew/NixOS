@@ -24,6 +24,7 @@
     ffmpeg
     file
     google-chrome
+    hyprshot
     mission-center
     nerd-fonts.jetbrains-mono
     nil
@@ -146,6 +147,9 @@
         "$mod, space, exec, walker"
         "$mod, left, movetoworkspace, -1"
         "$mod, right, movetoworkspace, +1"
+        "$mod, delete, exec, hyprshot --mode region --freeze --clipboard-only"
+        "$mod SHIFT, delete, exec, hyprshot --mode window --freeze --clipboard-only"
+        "$mod CTRL, delete, exec, hyprshot --mode output --freeze --clipboard-only"
       ];
 
       bindm = [
@@ -211,6 +215,7 @@
 
   services = {
     swww.enable = true;
+    swaync.enable = true;
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
