@@ -25,6 +25,7 @@
     file
     google-chrome
     hyprshot
+    jetbrains.pycharm-professional
     mission-center
     nerd-fonts.jetbrains-mono
     nil
@@ -211,6 +212,8 @@
     };
 
     obs-studio.enable = true;
+
+    yt-dlp.enable = true;
   };
 
   services = {
