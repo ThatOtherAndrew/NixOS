@@ -88,6 +88,12 @@
   #   enableSSHSupport = true;
   # };
 
+  stylix = {
+    enable = true;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark-dark.yaml";
+    polarity = "dark";
+  };
+
   security.rtkit.enable = true;  # recommended for PipeWire
 
   virtualisation.docker = {
@@ -129,11 +135,6 @@
       enable = true;
 
       settings.vim = {
-        theme = {
-          enable = true;
-          name = "onedark";
-        };
-
         languages = {
           nix.enable = true;
           python.enable = true;

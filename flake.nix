@@ -24,6 +24,11 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, home-manager, ... } @ inputs: {
@@ -48,6 +53,7 @@
           {
             programs.nix-index-database.comma.enable = true;
           }
+          inputs.stylix.nixosModules.stylix
         ];
       };
     };
