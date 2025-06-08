@@ -152,6 +152,8 @@
         "$mod, Q, killactive"
         "$mod, T, exec, kitty"
         "$mod, F, fullscreen, toggle"
+        "$mod, L, exec, hyprlock --immediate"
+        "$mod, N, exec, swaync-client --toggle-panel"
         "$mod, space, exec, walker"
         "$mod, left, movetoworkspace, -1"
         "$mod, right, movetoworkspace, +1"
