@@ -216,6 +216,34 @@
     obs-studio.enable = true;
 
     yt-dlp.enable = true;
+
+    hyprlock = {
+      enable = true;
+      settings = {
+        general = {
+          hide_cursor = true;
+          grace = 5;
+          ignore_empty_input = true;
+        };
+
+        fingerprint.enabled = true;
+
+        background = {
+          path = "screenshot";
+          blur_passes = 2;
+          blur_size = 5;
+        };
+
+        label = {
+          text = "cmd[update:1000] date +%-I:%M";
+          font_size = 100;
+          font_family = "JetBrains Mono Extrabold";
+          position = "0, 200";
+          halign = "center";
+          valign = "center";
+        };
+      };
+    };
   };
 
   services = {
