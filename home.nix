@@ -76,6 +76,14 @@
     size = 20;
   };
 
+  gtk = {
+    enable = true;
+    iconTheme = {
+      name = "Adwaita";
+      package = pkgs.adwaita-icon-theme;
+    };
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
 
