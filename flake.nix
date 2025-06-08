@@ -34,7 +34,7 @@
   outputs = { nixpkgs, home-manager, ... } @ inputs: {
     nixosConfigurations = let
       username = "andromeda";
-      hostname = "atmos";
+      hostname = "nova";
     in {
       ${hostname} = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
