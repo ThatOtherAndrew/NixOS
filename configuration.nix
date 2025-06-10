@@ -117,6 +117,8 @@
     };
 
     automatic-timezoned.enable = true;
+
+    fprintd.enable = true;
   };
 
   programs = {
@@ -124,6 +126,8 @@
       enable = true;
       withUWSM = true;
     };
+
+    hyprlock.enable = true;
 
     steam.enable = true;
 

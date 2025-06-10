@@ -234,6 +234,7 @@
           hide_cursor = true;
           grace = 5;
           ignore_empty_input = true;
+          enable_fingerprint = true;
         };
 
         fingerprint.enabled = true;
