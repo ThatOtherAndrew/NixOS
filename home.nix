@@ -62,7 +62,7 @@
       serif = [];
       sansSerif = [];
       monospace = ["JetBrains Mono Nerd Font"];
-      emoji = ["Twitter Color Emoji"];
+      emoji = [];
     };
   };
 
