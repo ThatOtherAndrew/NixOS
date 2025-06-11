@@ -12,6 +12,12 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  environment.shellInit = ''
+    if uwsm check may-start; then
+      exec uwsm start hyprland-uwsm.desktop
+    fi
+  '';
+
   networking.hostName = "nova"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -122,6 +128,8 @@
   };
 
   programs = {
+    uwsm.enable = true;
+
     hyprland = {
       enable = true;
       withUWSM = true;
