@@ -8,9 +8,29 @@
       ./hardware-configuration.nix
     ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+      timeout = 0;
+      grub.timeoutStyle = "hidden";
+    };
+
+    # plymouth = let
+    #   selected-theme = "rings";
+    # in {
+    #   enable = true;
+    #   themePackages = with pkgs; [
+    #     (
+    #       adi1090x-plymouth-themes.override {
+    #         selected-themes = [ selected-theme ];
+    #       }
+    #     )
+    #   ];
+    #   theme = selected-theme;
+    # };
+    plymouth.enable = true;
+  };
 
   environment.shellInit = ''
     if uwsm check may-start; then
