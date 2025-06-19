@@ -132,6 +132,11 @@
     # fwupdmgr (system firmware update manager)
     fwupd.enable = true;
 
+    getty = {
+      autologinUser = "andromeda";
+      autologinOnce = true;
+    };
+
     power-profiles-daemon.enable = true;
 
     pipewire = {
