@@ -1,12 +1,25 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  imports =
-    [ # Include the results of the hardware scan.
+  imports = with inputs;
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
+
+      nixos-hardware.nixosModules.framework-16-7040-amd
+      home-manager.nixosModules.home-manager
+      nvf.nixosModules.default
+      nix-index-database.nixosModules.nix-index
+      stylix.nixosModules.stylix
     ];
+
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+  home-manager.users.andromeda = ./home.nix;
+  home-manager.extraSpecialArgs = { inherit inputs; };
+  programs.nix-index-database.comma.enable = true;
 
   boot = {
     loader = {
