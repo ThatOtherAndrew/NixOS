@@ -31,13 +31,15 @@
     };
   };
 
-  outputs = { nixpkgs, ... } @ inputs: {
+  outputs = { nixpkgs, ... } @ inputs: let
+    vars = import ./variables.nix;
+  in {
     nixosConfigurations = {
       nova = nixpkgs.lib.nixosSystem {
         modules = [
           ./hosts/nova
         ];
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs vars; };
       };
     };
   };

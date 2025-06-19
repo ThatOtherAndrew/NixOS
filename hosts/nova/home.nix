@@ -1,10 +1,10 @@
-{ inputs, pkgs, ... }:
+{ inputs, vars, pkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "andromeda";
-  home.homeDirectory = "/home/andromeda";
+  home.username = vars.username;
+  home.homeDirectory = "/home/${vars.username}";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -189,8 +189,8 @@
 
     git = {
       enable = true;
-      userName = "Andromeda";
-      userEmail = "stroev.andrew@gmail.com";
+      userName = vars.display-name;
+      userEmail = vars.email;
       extraConfig = {
         init.defaultBranch = "main";
       };
@@ -220,7 +220,7 @@
 
     nh = {
       enable = true;
-      flake = "/home/andromeda/nixos";
+      flake = vars.config-path;
     };
 
     obs-studio.enable = true;

@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ inputs, vars, pkgs, ... }:
 
 {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -17,8 +17,8 @@
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-  home-manager.users.andromeda = ./home.nix;
-  home-manager.extraSpecialArgs = { inherit inputs; };
+  home-manager.users.${vars.username} = ./home.nix;
+  home-manager.extraSpecialArgs = { inherit inputs vars; };
   programs.nix-index-database.comma.enable = true;
 
   boot = {
@@ -94,9 +94,9 @@
   console.keyMap = "uk";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.andromeda = {
+  users.users.${vars.username} = {
     isNormalUser = true;
-    description = "andromeda";
+    description = vars.display-name;
     extraGroups = [ "audio" "networkmanager" "wheel" ];
   };
 
@@ -146,7 +146,7 @@
     fwupd.enable = true;
 
     getty = {
-      autologinUser = "andromeda";
+      autologinUser = vars.username;
       autologinOnce = true;
     };
 
