@@ -166,6 +166,11 @@
 
     fprintd.enable = true;
 
+    udisks2 = {
+      enable = true;
+      mountOnMedia = true;
+    };
+
     mullvad-vpn = {
       enable = true;
       package = pkgs.mullvad-vpn;

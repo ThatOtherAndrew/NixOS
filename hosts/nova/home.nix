@@ -262,6 +262,7 @@
     swww.enable = true;
     swaync.enable = true;
     swayosd.enable = true;
+    udiskie.enable = true;
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
