@@ -165,6 +165,11 @@
     automatic-timezoned.enable = true;
 
     fprintd.enable = true;
+
+    mullvad-vpn = {
+      enable = true;
+      package = pkgs.mullvad-vpn;
+    };
   };
 
   programs = {
