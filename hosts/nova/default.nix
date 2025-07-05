@@ -1,19 +1,22 @@
 { inputs, vars, pkgs, ... }:
 
 {
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix = {
+    settings.experimental-features = [ "nix-command" "flakes" ];
 
-  imports = with inputs;
-    [
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+    # registry = {};
+  };
 
-      nixos-hardware.nixosModules.framework-16-7040-amd
-      home-manager.nixosModules.home-manager
-      nvf.nixosModules.default
-      nix-index-database.nixosModules.nix-index
-      stylix.nixosModules.stylix
-    ];
+  imports = with inputs; [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+
+    nixos-hardware.nixosModules.framework-16-7040-amd
+    home-manager.nixosModules.home-manager
+    nvf.nixosModules.default
+    nix-index-database.nixosModules.nix-index
+    stylix.nixosModules.stylix
+  ];
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
@@ -67,7 +70,6 @@
   services.udev.extraRules = ''
     SUBSYSTEM=="usb", DRIVERS=="usb", ATTRS{idVendor}=="32ac", ATTRS{idProduct}=="0018", ATTR{power/wakeup}="disabled", ATTR{driver/1-1.1.1.4/power/wakeup}="disabled"
   '';
-
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
@@ -129,7 +131,7 @@
     polarity = "dark";
   };
 
-  security.rtkit.enable = true;  # recommended for PipeWire
+  security.rtkit.enable = true; # recommended for PipeWire
 
   virtualisation.docker = {
     enable = true;
