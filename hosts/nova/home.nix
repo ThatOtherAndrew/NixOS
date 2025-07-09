@@ -161,6 +161,7 @@
         "$mod, delete, exec, hyprshot --mode region --freeze --clipboard-only"
         "$mod SHIFT, delete, exec, hyprshot --mode window --freeze --clipboard-only"
         "$mod CTRL, delete, exec, hyprshot --mode output --freeze --clipboard-only"
+        "CTRL ALT, delete, exec, pgrep -x wlogout || wlogout --buttons-per-row 5"
       ];
 
       bindm = [
@@ -255,6 +256,43 @@
           valign = "center";
         };
       };
+    };
+
+    wlogout = {
+      enable = true;
+      layout = [
+        {
+          label = "lock";
+          action = "sleep 0.3 && hyprlock --immediate";
+          text = "Lock";
+          keybind = "l";
+        }
+        {
+          label = "suspend";
+          action = "systemctl suspend";
+          text = "Sleep";
+          keybind = "s";
+        }
+
+        {
+          label = "hibernate";
+          action = "systemctl hibernate";
+          text = "Hibernate";
+          keybind = "h";
+        }
+        {
+          label = "shutdown";
+          action = "systemctl poweroff";
+          text = "Power off";
+          keybind = "p";
+        }
+        {
+          label = "reboot";
+          action = "systemctl reboot";
+          text = "Reboot";
+          keybind = "r";
+        }
+      ];
     };
   };
 
