@@ -16,6 +16,8 @@
     nvf.nixosModules.default
     nix-index-database.nixosModules.nix-index
     stylix.nixosModules.stylix
+
+    ../../modules/wlogout
   ];
 
   home-manager.useGlobalPkgs = true;
