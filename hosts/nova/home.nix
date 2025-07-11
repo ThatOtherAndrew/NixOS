@@ -26,7 +26,6 @@
     hyprshot
     jetbrains.pycharm-professional
     mission-center
-    mullvad-vpn
     nerd-fonts.jetbrains-mono
     nil
     nwg-displays

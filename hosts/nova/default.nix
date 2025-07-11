@@ -17,6 +17,7 @@
     nix-index-database.nixosModules.nix-index
     stylix.nixosModules.stylix
 
+    ../../modules/mullvad
     ../../modules/wlogout
   ];
 
@@ -171,11 +172,6 @@
     udisks2 = {
       enable = true;
       mountOnMedia = true;
-    };
-
-    mullvad-vpn = {
-      enable = true;
-      package = pkgs.mullvad-vpn;
     };
   };
 
