@@ -26,17 +26,12 @@
     hyprshot
     jetbrains.pycharm-professional
     mission-center
-    nerd-fonts.jetbrains-mono
     nil
     nwg-displays
     overskride
     pavucontrol
     pinta
     ripgrep-all
-    twemoji-color-font
-    twitter-color-emoji
-    unifont
-    unifont_upper
     vesktop
     walker
     zed-editor
@@ -54,16 +49,6 @@
   home.shellAliases = {
     grep = "rga";
     cat = "bat";
-  };
-
-  fonts.fontconfig = {
-    enable = true;
-    defaultFonts = {
-      serif = [];
-      sansSerif = [];
-      monospace = ["JetBrains Mono Nerd Font"];
-      emoji = [];
-    };
   };
 
   home.pointerCursor = {

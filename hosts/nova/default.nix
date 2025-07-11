@@ -17,6 +17,7 @@
     nix-index-database.nixosModules.nix-index
     stylix.nixosModules.stylix
 
+    ../../modules/fonts
     ../../modules/mullvad
     ../../modules/wlogout
   ];
@@ -103,10 +104,6 @@
     isNormalUser = true;
     description = vars.display-name;
     extraGroups = [ "audio" "networkmanager" "wheel" ];
-  };
-
-  fonts = {
-    enableDefaultPackages = true;
   };
 
   # Allow unfree packages
