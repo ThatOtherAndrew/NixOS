@@ -29,13 +29,18 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    musnix = {
+      url = "github:musnix/musnix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, ... } @ inputs: let
+  outputs = inputs: let
     vars = import ./variables.nix;
   in {
     nixosConfigurations = {
-      nova = nixpkgs.lib.nixosSystem {
+      nova = inputs.nixpkgs.lib.nixosSystem {
         modules = [
           ./hosts/nova
         ];

@@ -16,9 +16,11 @@
     nvf.nixosModules.default
     nix-index-database.nixosModules.nix-index
     stylix.nixosModules.stylix
+    musnix.nixosModules.musnix
 
     ../../modules/fonts
     ../../modules/mullvad
+    ../../modules/music
     ../../modules/wlogout
   ];
 
