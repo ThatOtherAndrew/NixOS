@@ -1,7 +1,7 @@
-{ /* vars, */ ... }:
+{ vars, ... }:
 
 {
-  # home-manager.users.${vars.username} = ./home-manager.nix;
+  home-manager.users.${vars.username} = ./home-manager.nix;
 
   musnix = {
     enable = true;
