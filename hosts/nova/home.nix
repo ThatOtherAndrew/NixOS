@@ -24,7 +24,6 @@
     file
     google-chrome
     hyprshot
-    jetbrains.pycharm-professional
     mission-center
     nil
     nwg-displays

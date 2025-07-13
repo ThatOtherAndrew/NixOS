@@ -19,6 +19,7 @@
     musnix.nixosModules.musnix
 
     ../../modules/fonts
+    ../../modules/jetbrains
     ../../modules/mullvad
     ../../modules/music
     ../../modules/wlogout
