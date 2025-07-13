@@ -19,6 +19,7 @@
     musnix.nixosModules.musnix
 
     ../../modules/fonts
+    ../../modules/hyprland
     ../../modules/jetbrains
     ../../modules/mullvad
     ../../modules/music
@@ -177,13 +178,6 @@
 
   programs = {
     uwsm.enable = true;
-
-    hyprland = {
-      enable = true;
-      withUWSM = true;
-    };
-
-    hyprlock.enable = true;
 
     steam.enable = true;
 
