@@ -34,9 +34,17 @@
         resize_on_border = true;
       };
 
+      dwindle = {
+        preserve_split = true;
+        precise_mouse_move = true;
+      };
+
       input = {
         kb_layout = "gb";
-        touchpad.natural_scroll = true;
+        touchpad = {
+          natural_scroll = true;
+          drag_lock = 0;  # don't hold mouse down on double-tap and drag
+        };
       };
 
       gestures = {
