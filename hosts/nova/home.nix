@@ -18,37 +18,18 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    bat
     beeper
-    ffmpeg
-    file
     google-chrome
     hyprshot
     mission-center
-    nil
     nwg-displays
     overskride
     pavucontrol
     pinta
-    ripgrep-all
     vesktop
     walker
     zed-editor
-
-    inputs.tsutsumi.packages.${system}.wakatime-ls
-
-    # You can also create simple shell scripts directly inside your
-    # configuration. For example, this adds a command 'my-hello' to your
-    # environment:
-    # (pkgs.writeShellScriptBin "my-hello" ''
-      # echo "Hello, ${config.home.username}!"
-    # '')
   ];
-
-  home.shellAliases = {
-    grep = "rga";
-    cat = "bat";
-  };
 
   home.pointerCursor = {
     enable = true;

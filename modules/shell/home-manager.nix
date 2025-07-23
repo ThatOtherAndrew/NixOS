@@ -1,6 +1,25 @@
-{ vars, ... }:
+{ inputs, vars, pkgs, ... }:
 
 {
+  home.shell.enableShellIntegration = true;
+
+  home.packages = with pkgs; [
+    bat
+    ffmpeg
+    file
+    nil
+    ripgrep-all
+
+    inputs.tsutsumi.packages.${system}.wakatime-ls
+
+    # You can also create simple shell scripts directly inside your
+    # configuration. For example, this adds a command 'my-hello' to your
+    # environment:
+    # (pkgs.writeShellScriptBin "my-hello" ''
+      # echo "Hello, ${config.home.username}!"
+    # '')
+  ];
+
   programs = {
     bash = {
       enable = true;
@@ -47,5 +66,9 @@
     };
 
     yt-dlp.enable = true;
+  };
+
+  home.shellAliases = {
+    grep = "rga";
   };
 }
