@@ -23,6 +23,7 @@
     ../../modules/jetbrains
     ../../modules/mullvad
     ../../modules/music
+    ../../modules/shell
     ../../modules/vm
     ../../modules/wlogout
   ];
@@ -179,8 +180,6 @@
 
   programs = {
     uwsm.enable = true;
-
-    steam.enable = true;
 
     nvf = {
       enable = true;

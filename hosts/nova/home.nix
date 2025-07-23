@@ -69,31 +69,6 @@
   };
 
   programs = {
-    bash.enable = true;
-
-    git = {
-      enable = true;
-      userName = vars.display-name;
-      userEmail = vars.email;
-      extraConfig = {
-        init.defaultBranch = "main";
-      };
-    };
-
-    gh = {
-      enable = true;
-      gitCredentialHelper.enable = true;
-    };
-
-    zoxide = {
-      enable = true;
-      options = [
-        "--cmd cd"
-      ];
-    };
-
-    starship.enable = true;
-
     kitty = {
       enable = true;
     };
@@ -102,14 +77,7 @@
       enable = true;
     };
 
-    nh = {
-      enable = true;
-      flake = vars.config-path;
-    };
-
     obs-studio.enable = true;
-
-    yt-dlp.enable = true;
   };
 
   services = {
