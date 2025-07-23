@@ -23,6 +23,7 @@
     ../../modules/jetbrains
     ../../modules/mullvad
     ../../modules/music
+    ../../modules/vm
     ../../modules/wlogout
   ];
 
