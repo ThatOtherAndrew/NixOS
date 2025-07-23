@@ -19,6 +19,7 @@
     musnix.nixosModules.musnix
 
     ../../modules/fonts
+    ../../modules/gaming
     ../../modules/hyprland
     ../../modules/jetbrains
     ../../modules/mullvad
