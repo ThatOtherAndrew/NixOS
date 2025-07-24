@@ -2,6 +2,8 @@
 
 Here lie the [NixOS](https://nixos.org/) configuration files I use for my system setup (currently just my [Framework 16](https://frame.work/products/laptop16-diy-amd-7040) laptop). It's rather janky and _probably_ will break on differing hardware, but hey - it's mine.
 
+![](assets/demo-screenshot.png)
+
 ## Okay, so what's special about it?
 
 I'm glad you asked. There is actually one special feature within this jankfest which I think is somewhat unique, in a way which every major OS / desktop environmnent already does *in theory* but none actually does a good job in practice at.
@@ -56,3 +58,7 @@ sudo nixos-rebuild switch --flake ~/nixos
 ```
 
 And there you go, that's it! NixOS handles the rest for you from here, like magic~
+
+> [!NOTE]
+> Currently, this configuration does not automatically launch a specific graphical environment upon boot. Use the command `uwsm start hyprland-uwsm.desktop` to start the Hyprland desktop environment shown in the screenshot.
+
