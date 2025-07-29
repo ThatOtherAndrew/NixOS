@@ -52,7 +52,14 @@ First, clone the repository to a sensible location (e.g. `~/nixos`):
 git clone https://github.com/ThatOtherAndrew/NixOS ~/nixos
 ```
 
-Edit the `variables.nix` file to configure individual settings (e.g. your username and email), then rebuild!
+Next, edit the `variables.nix` file to configure individual settings (e.g. your username and email).
+
+Then, use the `nixos-generate-config` command to tailor the configuration to your specific computer hardware:
+```bash
+nixos-generate-config --show-hardware-config > ~/nixos/hosts/nova/hardware-configuration.nix
+```
+
+Finally, run the rebuild command!
 ```bash
 sudo nixos-rebuild switch --flake ~/nixos
 ```
@@ -61,4 +68,3 @@ And there you go, that's it! NixOS handles the rest for you from here, like magi
 
 > [!NOTE]
 > Currently, this configuration does not automatically launch a specific graphical environment upon boot. Use the command `uwsm start hyprland-uwsm.desktop` to start the Hyprland desktop environment shown in the screenshot.
-
