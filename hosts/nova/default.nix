@@ -170,6 +170,8 @@
       enable = true;
       mountOnMedia = true;
     };
+
+  gnome.gnome-keyring.enable = true;
   };
 
   programs = {
@@ -192,6 +194,8 @@
         telescope.enable = true;
       };
     };
+
+    seahorse.enable = true;
   };
 
   # Open ports in the firewall.
