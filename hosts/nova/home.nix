@@ -28,7 +28,6 @@
     pinta
     vesktop
     walker
-    zed-editor
   ];
 
   home.pointerCursor = {

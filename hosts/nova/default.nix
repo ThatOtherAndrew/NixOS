@@ -27,6 +27,7 @@
     ../../modules/shell
     ../../modules/vm
     ../../modules/wlogout
+    ../../modules/zed
   ];
 
   home-manager.useGlobalPkgs = true;
