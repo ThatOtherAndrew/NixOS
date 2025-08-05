@@ -23,6 +23,9 @@
     bash = {
       enable = true;
       initExtra = ''
+        # https://askubuntu.com/questions/67283/is-it-possible-to-make-writing-to-bash-history-immediate
+        PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+
         what() {
           target=$(which "$1") || return 1
           echo "-> $target"
