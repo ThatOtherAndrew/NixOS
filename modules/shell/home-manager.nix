@@ -7,6 +7,7 @@
     bat
     ffmpeg
     file
+    git
     ripgrep-all
     unzip
     zip
