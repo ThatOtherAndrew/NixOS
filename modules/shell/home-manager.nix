@@ -60,7 +60,14 @@
       ];
     };
 
-    starship.enable = true;
+    starship = {
+      enable = true;
+      settings = {
+        nix_shell = {
+          format = ''via [$symbol$name]($style) '';
+        };
+      };
+    };
 
     nh = {
       enable = true;
