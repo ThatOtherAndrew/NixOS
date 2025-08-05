@@ -1,0 +1,9 @@
+// Project tasks configuration. See https://zed.dev/docs/tasks for documentation.
+[
+  {
+    "label": "nh os switch",
+    "command": "nh os switch",
+    "reveal": "no_focus",
+    "hide": "on_success"
+  }
+]
