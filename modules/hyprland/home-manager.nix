@@ -27,6 +27,10 @@
 
       # Imports
       source = [
+        # stateful configuration (for temporary changes / testing / troubleshooting)
+        "~/.config/hypr/hyprland-local.conf"
+
+        # nwg-displays
         "~/.config/hypr/monitors.conf"
         "~/.config/hypr/workspaces.conf"
       ];
