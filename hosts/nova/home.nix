@@ -22,7 +22,6 @@
     google-chrome
     hyprshot
     mission-center
-    nwg-displays
     overskride
     pavucontrol
     pinta

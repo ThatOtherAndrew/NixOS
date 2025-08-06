@@ -1,6 +1,10 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    nwg-displays
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
 
