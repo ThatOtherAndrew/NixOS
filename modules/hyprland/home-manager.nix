@@ -2,8 +2,12 @@
 
 {
   home.packages = with pkgs; [
+    hyprshot
     nwg-displays
+    walker
   ];
+
+  home.pointerCursor.hyprcursor.enable = true;
 
   wayland.windowManager.hyprland = {
     enable = true;
