@@ -22,6 +22,7 @@
     ../../modules/gaming
     ../../modules/hyprland
     ../../modules/jetbrains
+    ../../modules/ly
     ../../modules/mullvad
     ../../modules/music
     ../../modules/shell
@@ -59,12 +60,6 @@
     # };
     plymouth.enable = true;
   };
-
-  # environment.loginShellInit = ''
-  #   if uwsm check may-start; then
-  #     exec uwsm start hyprland-uwsm.desktop
-  #   fi
-  # '';
 
   networking.hostName = "nova"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -147,11 +142,6 @@
     # fwupdmgr (system firmware update manager)
     fwupd.enable = true;
 
-    getty = {
-      autologinUser = vars.username;
-      autologinOnce = true;
-    };
-
     power-profiles-daemon.enable = true;
 
     pipewire = {
@@ -175,8 +165,6 @@
   };
 
   programs = {
-    uwsm.enable = true;
-
     nvf = {
       enable = true;
 
