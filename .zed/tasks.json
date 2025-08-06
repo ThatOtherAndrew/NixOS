@@ -5,5 +5,11 @@
     "command": "nh os switch",
     "reveal": "no_focus",
     "hide": "on_success"
+  },
+  {
+    "label": "nh os boot",
+    "command": "nh os boot",
+    "reveal": "no_focus",
+    "hide": "on_success"
   }
 ]
