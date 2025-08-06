@@ -64,6 +64,13 @@
     starship = {
       enable = true;
       settings = {
+        battery = {
+          display = [
+            { threshold = 10; style = "bold red"; }
+            { threshold = 20; style = "bold yellow"; }
+          ];
+        };
+
         nix_shell = {
           format = ''via [$symbol$name]($style) '';
         };
