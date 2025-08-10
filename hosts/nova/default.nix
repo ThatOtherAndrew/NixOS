@@ -21,6 +21,7 @@
     ../../modules/fonts
     ../../modules/gaming
     ../../modules/hyprland
+    ../../modules/hyprlock
     ../../modules/jetbrains
     ../../modules/ly
     ../../modules/mullvad
