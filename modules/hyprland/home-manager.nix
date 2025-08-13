@@ -66,6 +66,9 @@
       misc = {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
+
+        # needed because of X-NIXOS-SYSTEMD-AWARE
+        disable_xdg_env_checks = true;
       };
 
       # Binds (https://wiki.hyprland.org/Configuring/Binds/)
