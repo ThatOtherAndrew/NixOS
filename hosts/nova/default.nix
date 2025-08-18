@@ -20,10 +20,10 @@
 
     ../../modules/fonts
     ../../modules/gaming
+    ../../modules/greetd
     ../../modules/hyprland
     ../../modules/hyprlock
     ../../modules/jetbrains
-    ../../modules/ly
     ../../modules/mullvad
     ../../modules/music
     ../../modules/shell
