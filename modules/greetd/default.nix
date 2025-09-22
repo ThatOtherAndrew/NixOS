@@ -20,4 +20,7 @@
     }
     ;
   };
+
+  # automatically unlock GNOME keyring
+  security.pam.services.greetd.enableGnomeKeyring = true;
 }

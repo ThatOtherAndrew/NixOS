@@ -19,12 +19,16 @@
   # environment.
   home.packages = with pkgs; [
     beeper
+    capacities
+    ( bottles.override { removeWarningPopup = true; } )
+    godot
     google-chrome
     mission-center
     overskride
     pavucontrol
     pinta
     vesktop
+    vital
   ];
 
   home.pointerCursor = {

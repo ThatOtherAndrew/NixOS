@@ -137,6 +137,8 @@
     };
   };
 
+  virtualisation.waydroid.enable = true;
+
   hardware.bluetooth.enable = true;
 
   services = {

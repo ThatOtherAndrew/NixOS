@@ -1,5 +1,10 @@
 { pkgs, ... }:
 
 {
-  home.packages = [ pkgs.bitwig-studio ];
+  home.packages = with pkgs; [
+    bitwig-studio
+    reaper
+    yabridge
+    yabridgectl
+  ];
 }

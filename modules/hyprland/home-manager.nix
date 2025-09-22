@@ -55,10 +55,6 @@
         };
       };
 
-      gestures = {
-        workspace_swipe = true;
-      };
-
       xwayland = {
         force_zero_scaling = true;
       };
@@ -117,6 +113,10 @@
         ", XF86AudioMute, exec, swayosd-client --output-volume mute-toggle"
         "SHIFT, XF86AudioMute, exec, swayosd-client --input-volume mute-toggle"
         ", XF86AudioMicMute, exec, swayosd-client --input-volume mute-toggle"
+      ];
+
+      gesture = [
+        "3, horizontal, workspace"
       ];
     };
   };
