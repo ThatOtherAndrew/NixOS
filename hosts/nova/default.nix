@@ -26,6 +26,7 @@
     ../../modules/jetbrains
     ../../modules/mullvad
     ../../modules/music
+    ../../modules/python
     ../../modules/shell
     ../../modules/vm
     ../../modules/wlogout
