@@ -165,7 +165,13 @@
       mountOnMedia = true;
     };
 
-  gnome.gnome-keyring.enable = true;
+    gnome.gnome-keyring.enable = true;
+
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+      nssmdns6 = true;
+    };
   };
 
   programs = {
