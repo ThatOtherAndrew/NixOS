@@ -4,10 +4,11 @@
   home.packages = with pkgs; [
     hyprshot
     nwg-displays
-    walker
   ];
 
   home.pointerCursor.hyprcursor.enable = true;
+
+  services.vicinae.enable = true;
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -87,7 +88,7 @@
         "$mod, F, fullscreen, toggle"
         "$mod, L, exec, hyprlock --immediate"
         "$mod, N, exec, swaync-client --toggle-panel"
-        "$mod, space, exec, walker"
+        "$mod, space, exec, vicinae"
         "$mod, left, movetoworkspace, -1"
         "$mod, right, movetoworkspace, +1"
         "$mod, delete, exec, hyprshot --mode region --freeze --clipboard-only"

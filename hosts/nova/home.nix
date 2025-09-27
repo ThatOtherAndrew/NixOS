@@ -1,6 +1,10 @@
-{ vars, pkgs, ... }:
+{ inputs, vars, pkgs, ... }:
 
 {
+  imports = [
+    inputs.vicinae.homeManagerModules.default
+  ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = vars.username;
