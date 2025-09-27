@@ -178,6 +178,8 @@
   };
 
   programs = {
+    fuse.userAllowOther = true; # enable FUSE for non-root users
+
     nix-ld = {
       enable = true;
       libraries = with pkgs; [
