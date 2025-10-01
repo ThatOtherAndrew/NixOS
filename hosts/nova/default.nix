@@ -28,7 +28,7 @@
     ../../modules/hyprlock
     ../../modules/jetbrains
     ../../modules/mullvad
-    ../../modules/music
+    ../../modules/audio
     ../../modules/python
     ../../modules/shell
     ../../modules/vm
