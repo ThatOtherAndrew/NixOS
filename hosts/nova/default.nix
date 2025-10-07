@@ -175,6 +175,9 @@
       nssmdns4 = true;
       nssmdns6 = true;
     };
+
+    # required for URIs like trash://
+    gvfs.enable = true;
   };
 
   programs = {
