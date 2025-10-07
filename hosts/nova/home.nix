@@ -59,8 +59,6 @@
     waybar = {
       enable = true;
     };
-
-    obs-studio.enable = true;
   };
 
   services = {

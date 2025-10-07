@@ -207,6 +207,11 @@
     };
 
     seahorse.enable = true;
+
+    obs-studio = {
+      enable = true;
+      enableVirtualCamera = true;
+    };
   };
 
   # Open ports in the firewall.
