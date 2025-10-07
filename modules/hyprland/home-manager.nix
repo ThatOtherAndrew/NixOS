@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     hyprshot
     nwg-displays
+    wl-clipboard
   ];
 
   home.pointerCursor.hyprcursor.enable = true;
