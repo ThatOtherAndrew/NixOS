@@ -5,6 +5,7 @@
 
   home.packages = with pkgs; [
     bat
+    claude-code
     ffmpeg
     file
     git

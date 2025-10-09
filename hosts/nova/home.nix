@@ -23,14 +23,15 @@
   # environment.
   home.packages = with pkgs; [
     beeper
-    capacities
     ( bottles.override { removeWarningPopup = true; } )
+    capacities
     godot
     google-chrome
     mission-center
     overskride
     pavucontrol
     pinta
+    slack
     vesktop
     vital
   ];
