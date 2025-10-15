@@ -111,7 +111,7 @@
   users.users.${vars.username} = {
     isNormalUser = true;
     description = vars.display-name;
-    extraGroups = [ "audio" "networkmanager" "wheel" ];
+    extraGroups = [ "audio" "networkmanager" "wheel" "docker" ];
   };
 
   # Allow unfree packages
@@ -135,10 +135,6 @@
 
   virtualisation.docker = {
     enable = true;
-    rootless = {
-      enable = true;
-      setSocketVariable = true;
-    };
   };
 
   virtualisation.waydroid.enable = true;
