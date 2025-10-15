@@ -89,7 +89,7 @@
         "$mod, F, fullscreen, toggle"
         "$mod, L, exec, hyprlock --immediate"
         "$mod, N, exec, swaync-client --toggle-panel"
-        "$mod, space, exec, vicinae"
+        "$mod, space, exec, vicinae toggle"
         "$mod, left, movetoworkspace, -1"
         "$mod, right, movetoworkspace, +1"
         "$mod, delete, exec, hyprshot --mode region --freeze --clipboard-only"
