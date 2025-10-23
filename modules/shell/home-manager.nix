@@ -43,9 +43,11 @@
 
     git = {
       enable = true;
-      userName = vars.display-name;
-      userEmail = vars.email;
-      extraConfig = {
+      settings = {
+        user = {
+          email = vars.email;
+          name = vars.display-name;
+        };
         init.defaultBranch = "main";
       };
     };
