@@ -92,6 +92,8 @@
         "$mod, space, exec, vicinae toggle"
         "$mod, left, movetoworkspace, -1"
         "$mod, right, movetoworkspace, +1"
+        "$mod CTRL, left, workspace, -1"
+        "$mod CTRL, right, workspace, +1"
         "$mod, delete, exec, hyprshot --mode region --freeze --clipboard-only"
         "$mod SHIFT, delete, exec, hyprshot --mode window --freeze --clipboard-only"
         "$mod CTRL, delete, exec, hyprshot --mode output --freeze --clipboard-only"
