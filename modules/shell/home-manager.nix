@@ -9,6 +9,7 @@
     ffmpeg
     file
     git
+    jq
     ripgrep-all
     unzip
     zip
@@ -55,6 +56,11 @@
     gh = {
       enable = true;
       gitCredentialHelper.enable = true;
+      settings = {
+        aliases = {
+          copy-webhook = ''!gh api repos/$1/hooks | jq -r --arg dest "$2" '.[0] | "gh api repos/\($dest)/hooks -X POST " + "-f name=web " + "-f \"config[url]=\(.config.url)\" " + "-f \"config[content_type]=\(.config.content_type)\" " + "-f \"config[insecure_ssl]=\(.config.insecure_ssl)\" " + (.events | map("-F \"events[]=\(.)\"") | join(" ")) + " -F active=true"' | bash'';
+        };
+      };
     };
 
     zoxide = {
