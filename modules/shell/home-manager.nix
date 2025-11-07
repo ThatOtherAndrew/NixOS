@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
     bat
     claude-code
+    cloudflared
     ffmpeg
     file
     git
@@ -38,6 +39,10 @@
           done
           echo -n "== "
           file -b "$target"
+        }
+
+        tunnel() {
+          cloudflared tunnel run --url "localhost:''${1:-80}" nova
         }
       '';
     };
@@ -92,9 +97,5 @@
     };
 
     yt-dlp.enable = true;
-  };
-
-  home.shellAliases = {
-    grep = "rga";
   };
 }
