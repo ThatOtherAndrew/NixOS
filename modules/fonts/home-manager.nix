@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
+    noto-fonts-cjk-sans
     twemoji-color-font
     unifont
     unifont_upper
