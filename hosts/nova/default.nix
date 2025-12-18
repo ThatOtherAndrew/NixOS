@@ -66,15 +66,13 @@
     plymouth.enable = true;
   };
 
-  networking.hostName = "nova"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  networking.hostName = "nova";
 
   # Enable networking
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    enable = true;
+    wifi.backend = "iwd"; # replaces wpa_supplicant
+  };
 
   # Speed up boot by skipping network checks (redundant with NetworkManager)
   systemd.network.wait-online.enable = false;
