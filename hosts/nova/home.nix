@@ -27,6 +27,7 @@
     capacities
     godot
     google-chrome
+    gpu-screen-recorder-gtk
     mission-center
     overskride
     pavucontrol
