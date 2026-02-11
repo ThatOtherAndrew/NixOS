@@ -72,7 +72,9 @@
 
   home.sessionVariables = {
     EDITOR = "zeditor";
+    HISTCONTROL = "ignoreboth";
     NIXOS_OZONE_WL = "1";
+    NIXPKGS_ALLOW_UNFREE = "1";
   };
 
   # Let Home Manager install and manage itself.
