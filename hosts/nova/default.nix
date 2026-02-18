@@ -26,6 +26,7 @@
     ../../modules/greetd
     ../../modules/hyprland
     ../../modules/hyprlock
+    ../../modules/infinidesk
     ../../modules/jetbrains
     ../../modules/mullvad
     ../../modules/audio
