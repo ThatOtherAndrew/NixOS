@@ -5,7 +5,7 @@
     bitwig-studio
     helvum
     reaper
-    yabridge
-    yabridgectl
+    # yabridge
+    # yabridgectl
   ];
 }
