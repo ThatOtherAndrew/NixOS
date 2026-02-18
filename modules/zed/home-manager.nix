@@ -8,7 +8,7 @@
     nixd
     package-version-server
     zed-editor
-    inputs.tsutsumi.packages.${system}.wakatime-ls
+    inputs.tsutsumi.packages.${stdenv.hostPlatform.system}.wakatime-ls
   ];
 
   home.shellAliases = {
