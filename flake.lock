@@ -331,14 +331,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1771381925,
-        "narHash": "sha256-m5oeCVzXowx3cjyjoJi13Uk8QTI0YIZwSD9Pf9vnn8U=",
-        "path": "/home/andromeda/code/Infinidesk",
-        "type": "path"
+        "lastModified": 1771384968,
+        "narHash": "sha256-mKMtgHevoYjhqZYaamGMW82hlc5aX7nw+/xM7qK5ZJg=",
+        "owner": "ThatOtherAndrew",
+        "repo": "Infinidesk",
+        "rev": "3e0975a51c87cb93849b6c4a21454ef64641f890",
+        "type": "github"
       },
       "original": {
-        "path": "/home/andromeda/code/Infinidesk",
-        "type": "path"
+        "owner": "ThatOtherAndrew",
+        "repo": "Infinidesk",
+        "type": "github"
       }
     },
     "mnw": {
