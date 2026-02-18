@@ -1,5 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
+let
+  # Use only the deduplicated session list from sessionPackages,
+  # preventing duplicate entries from environment.systemPackages
+  sessionDir = "${config.services.displayManager.sessionData.desktops}/share/wayland-sessions";
+in
 {
   services.greetd = {
     enable = true;
@@ -12,6 +17,7 @@
           --user-menu \
           --remember \
           --remember-user-session \
+          --sessions ${sessionDir} \
           --theme 'border=magenta;text=cyan;prompt=green;time=red;action=blue;button=yellow;container=black;input=red' \
           --asterisks \
           --asterisks-char ':3' \
