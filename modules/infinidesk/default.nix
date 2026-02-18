@@ -1,7 +1,7 @@
 { inputs, pkgs, ... }:
 
 let
-  infinidesk = inputs.infinidesk.packages.${pkgs.system}.default;
+  infinidesk = inputs.infinidesk.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in
 {
   environment.systemPackages = [ infinidesk ];
