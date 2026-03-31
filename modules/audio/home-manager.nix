@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     bitwig-studio
-    helvum
+    crosspipe
     reaper
     # yabridge
     # yabridgectl
